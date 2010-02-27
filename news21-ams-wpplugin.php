@@ -8,7 +8,7 @@ Author: bhalle
 Author URI: http://news21.com
 */
 
-define ('N21WP_PATH', 'news21-wpplugin');
+define ('N21WP_PATH', 'news21-ams-wpplugin');
 define ('N21WP_PAGENAME_STORIES', 'n21-top-level-handle');
 define ('N21WP_PAGENAME_TAGS', 'sub-page');
 define ('N21WP_PAGENAME_STORYFILTERS', 'sub-page2');
@@ -25,7 +25,7 @@ function news21_add_pages() {
     add_options_page('N21 Options', 'News21 AMS', 'administrator', 'testoptions', 'news21_available_stories_page');
 
     // Add a new top-level menu (ill-advised):
-    $icon = WP_PLUGIN_URL.'/'.$fwp_path.'/news21-wpplugin/news21-ams2wp-tiny.png';
+    $icon = WP_PLUGIN_URL.'/'.$fwp_path.'/'.N21WP_PATH.'/news21-ams2wp-tiny.png';
     add_menu_page('Test Toplevel', 'News21 AMS', 'administrator', N21WP_PAGENAME_STORIES, 'news21_available_stories_page',$icon);
 
     // Add a submenu to the custom top-level menu:
